@@ -1,0 +1,13 @@
+{
+  "allowScripts": ["npm:@parcel/watcher@2.5.4", "npm:esbuild@0.27.2", "npm:sharp@0.34.5"],
+  "imports": {
+    /* Required for compatibilty */
+    "crypto": "node:crypto",
+    "http": "node:http",
+    "child_process": "node:child_process"
+    "util": "node:util"
+    "path": "node:path"
+    "fs": "node:fs"
+    "fs/promises": "node:fs/promises"
+  }
+}
