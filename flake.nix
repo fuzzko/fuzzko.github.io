@@ -25,5 +25,15 @@
       devShells.ci.packages = pkgs: with pkgs; [
         bun
       ];
+
+      devShells.ci.shellHook = pkgs: with pkgs; ''
+        bun() {
+          LD_LIBRARY_PATH="${
+            lib.makeLibraryPath [
+              stdenv.cc.cc.lib
+            ]
+          }" command bun "$@"
+        }
+      '';
     }; 
 }
