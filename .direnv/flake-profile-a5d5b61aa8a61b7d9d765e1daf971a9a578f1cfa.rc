@@ -14,6 +14,8 @@ CONFIG_SHELL='/nix/store/lw117lsr8d585xs63kx5k233impyrq7q-bash-5.3p3/bin/bash'
 export CONFIG_SHELL
 CXX='g++'
 export CXX
+DETERMINISTIC_BUILD='1'
+export DETERMINISTIC_BUILD
 HOSTTYPE='x86_64'
 HOST_PATH='/nix/store/d75200gb22v7p0703h5jrkgg8bqydk5q-coreutils-9.8/bin:/nix/store/wd99g2j010fdkry0ws1bhxzm52w82ssx-findutils-4.10.0/bin:/nix/store/20zvyjvxq9x2mkp7rbnvrwjjzq2n76hh-diffutils-3.12/bin:/nix/store/k06ssckzrzn9jjvvs4n62m6567zmbx6x-gnused-4.9/bin:/nix/store/qfmq7p42ak5yn389qvx7zpxkan5i4xiy-gnugrep-3.12/bin:/nix/store/nmxm04dhkaqg1q6hai70n9zmzb0q49a5-gawk-5.3.2/bin:/nix/store/k1lcfin159706lihwx5hhvl80dbij4jw-gnutar-1.35/bin:/nix/store/0hv4z5s3r1h4lmvn0427mlxjxgvg34nr-gzip-1.14/bin:/nix/store/p61ba9fdgx3358bpp18hv4rslf6n5bq6-bzip2-1.0.8-bin/bin:/nix/store/mkm3my2067305hdh7rzmi10npwr7y17f-gnumake-4.4.1/bin:/nix/store/lw117lsr8d585xs63kx5k233impyrq7q-bash-5.3p3/bin:/nix/store/clrf4mjwr8xcfpvway6w34wzvqc1hry4-patch-2.8/bin:/nix/store/j1zc5jh0vi9sbxj09ldj4xklgm6kpf8n-xz-5.8.1-bin/bin:/nix/store/s2k48fw3y698j4kcvmw0520m06ihv2z4-file-5.45/bin'
 export HOST_PATH
@@ -34,13 +36,13 @@ NIX_CC='/nix/store/r9wbjib6xxjkyb9yvjvrkl4sq61i2lyn-gcc-wrapper-15.2.0'
 export NIX_CC
 NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu='1'
 export NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu
-NIX_CFLAGS_COMPILE=' -frandom-seed=1jnzx40rpl'
+NIX_CFLAGS_COMPILE=' -frandom-seed=b7aqwfmbpm -isystem /nix/store/pmb8clh66mryha2ijzz3dg969drrkgj7-python3-3.14.2/include -isystem /nix/store/pmb8clh66mryha2ijzz3dg969drrkgj7-python3-3.14.2/include'
 export NIX_CFLAGS_COMPILE
 NIX_ENFORCE_NO_NATIVE='1'
 export NIX_ENFORCE_NO_NATIVE
 NIX_HARDENING_ENABLE='bindnow format fortify fortify3 libcxxhardeningextensive libcxxhardeningfast pic relro stackclashprotection stackprotector strictoverflow zerocallusedregs'
 export NIX_HARDENING_ENABLE
-NIX_LDFLAGS='-rpath /home/komo/Dev/fuzzko.github.io/outputs/out/lib  -L/nix/store/2bf7dm4avjkjhgpiad27c8wg96gr17ka-deno-2.6.4/lib -L/nix/store/2bf7dm4avjkjhgpiad27c8wg96gr17ka-deno-2.6.4/lib'
+NIX_LDFLAGS='-rpath /home/komo/Dev/fuzzko.github.io/outputs/out/lib  -L/nix/store/pmb8clh66mryha2ijzz3dg969drrkgj7-python3-3.14.2/lib -L/nix/store/pmb8clh66mryha2ijzz3dg969drrkgj7-python3-3.14.2/lib'
 export NIX_LDFLAGS
 NIX_NO_SELF_RPATH='1'
 NIX_STORE='/nix/store'
@@ -55,9 +57,15 @@ OLDPWD=''
 export OLDPWD
 OPTERR='1'
 OSTYPE='linux-gnu'
-PATH='/nix/store/2bf7dm4avjkjhgpiad27c8wg96gr17ka-deno-2.6.4/bin:/nix/store/3vs2fr2mazafcdwyza15bfhpmccx1k7z-patchelf-0.15.2/bin:/nix/store/r9wbjib6xxjkyb9yvjvrkl4sq61i2lyn-gcc-wrapper-15.2.0/bin:/nix/store/qarrb8yfby1yyypm32vabzgxgq3w41ma-gcc-15.2.0/bin:/nix/store/7ri1mm5y99nkr7657r77wycrvhg7z9x0-glibc-2.40-66-bin/bin:/nix/store/d75200gb22v7p0703h5jrkgg8bqydk5q-coreutils-9.8/bin:/nix/store/dwiyp91lmxq864plaas14jm14m87sg3f-binutils-wrapper-2.44/bin:/nix/store/cl88v2m1y5q3k6jlkq5jjf73nmfgl1px-binutils-2.44/bin:/nix/store/d75200gb22v7p0703h5jrkgg8bqydk5q-coreutils-9.8/bin:/nix/store/wd99g2j010fdkry0ws1bhxzm52w82ssx-findutils-4.10.0/bin:/nix/store/20zvyjvxq9x2mkp7rbnvrwjjzq2n76hh-diffutils-3.12/bin:/nix/store/k06ssckzrzn9jjvvs4n62m6567zmbx6x-gnused-4.9/bin:/nix/store/qfmq7p42ak5yn389qvx7zpxkan5i4xiy-gnugrep-3.12/bin:/nix/store/nmxm04dhkaqg1q6hai70n9zmzb0q49a5-gawk-5.3.2/bin:/nix/store/k1lcfin159706lihwx5hhvl80dbij4jw-gnutar-1.35/bin:/nix/store/0hv4z5s3r1h4lmvn0427mlxjxgvg34nr-gzip-1.14/bin:/nix/store/p61ba9fdgx3358bpp18hv4rslf6n5bq6-bzip2-1.0.8-bin/bin:/nix/store/mkm3my2067305hdh7rzmi10npwr7y17f-gnumake-4.4.1/bin:/nix/store/lw117lsr8d585xs63kx5k233impyrq7q-bash-5.3p3/bin:/nix/store/clrf4mjwr8xcfpvway6w34wzvqc1hry4-patch-2.8/bin:/nix/store/j1zc5jh0vi9sbxj09ldj4xklgm6kpf8n-xz-5.8.1-bin/bin:/nix/store/s2k48fw3y698j4kcvmw0520m06ihv2z4-file-5.45/bin'
+PATH='/nix/store/qgwwg2jr2yrksig72y9cmhj65bdcnxhn-bun-1.3.5/bin:/nix/store/vhbrfq30jqqz2w05pcvq3gwn1hq7qym0-python3.14-livereload-2.7.1/bin:/nix/store/pmb8clh66mryha2ijzz3dg969drrkgj7-python3-3.14.2/bin:/nix/store/3vs2fr2mazafcdwyza15bfhpmccx1k7z-patchelf-0.15.2/bin:/nix/store/r9wbjib6xxjkyb9yvjvrkl4sq61i2lyn-gcc-wrapper-15.2.0/bin:/nix/store/qarrb8yfby1yyypm32vabzgxgq3w41ma-gcc-15.2.0/bin:/nix/store/7ri1mm5y99nkr7657r77wycrvhg7z9x0-glibc-2.40-66-bin/bin:/nix/store/d75200gb22v7p0703h5jrkgg8bqydk5q-coreutils-9.8/bin:/nix/store/dwiyp91lmxq864plaas14jm14m87sg3f-binutils-wrapper-2.44/bin:/nix/store/cl88v2m1y5q3k6jlkq5jjf73nmfgl1px-binutils-2.44/bin:/nix/store/d75200gb22v7p0703h5jrkgg8bqydk5q-coreutils-9.8/bin:/nix/store/wd99g2j010fdkry0ws1bhxzm52w82ssx-findutils-4.10.0/bin:/nix/store/20zvyjvxq9x2mkp7rbnvrwjjzq2n76hh-diffutils-3.12/bin:/nix/store/k06ssckzrzn9jjvvs4n62m6567zmbx6x-gnused-4.9/bin:/nix/store/qfmq7p42ak5yn389qvx7zpxkan5i4xiy-gnugrep-3.12/bin:/nix/store/nmxm04dhkaqg1q6hai70n9zmzb0q49a5-gawk-5.3.2/bin:/nix/store/k1lcfin159706lihwx5hhvl80dbij4jw-gnutar-1.35/bin:/nix/store/0hv4z5s3r1h4lmvn0427mlxjxgvg34nr-gzip-1.14/bin:/nix/store/p61ba9fdgx3358bpp18hv4rslf6n5bq6-bzip2-1.0.8-bin/bin:/nix/store/mkm3my2067305hdh7rzmi10npwr7y17f-gnumake-4.4.1/bin:/nix/store/lw117lsr8d585xs63kx5k233impyrq7q-bash-5.3p3/bin:/nix/store/clrf4mjwr8xcfpvway6w34wzvqc1hry4-patch-2.8/bin:/nix/store/j1zc5jh0vi9sbxj09ldj4xklgm6kpf8n-xz-5.8.1-bin/bin:/nix/store/s2k48fw3y698j4kcvmw0520m06ihv2z4-file-5.45/bin'
 export PATH
 PS4='+ '
+PYTHONHASHSEED='0'
+export PYTHONHASHSEED
+PYTHONNOUSERSITE='1'
+export PYTHONNOUSERSITE
+PYTHONPATH='/nix/store/vhbrfq30jqqz2w05pcvq3gwn1hq7qym0-python3.14-livereload-2.7.1/lib/python3.14/site-packages:/nix/store/fndd9bq2ryc13qrz5f2n6q5sr83h04vi-python3.14-tornado-6.5.2/lib/python3.14/site-packages:/nix/store/pmb8clh66mryha2ijzz3dg969drrkgj7-python3-3.14.2/lib/python3.14/site-packages:/nix/store/vsxj4c2r8c4k8z94cnh54dvh75yqqcq4-python3.14-six-1.17.0/lib/python3.14/site-packages'
+export PYTHONPATH
 RANLIB='ranlib'
 export RANLIB
 READELF='readelf'
@@ -72,8 +80,12 @@ STRINGS='strings'
 export STRINGS
 STRIP='strip'
 export STRIP
-XDG_DATA_DIRS='/nix/store/2bf7dm4avjkjhgpiad27c8wg96gr17ka-deno-2.6.4/share:/nix/store/3vs2fr2mazafcdwyza15bfhpmccx1k7z-patchelf-0.15.2/share'
+XDG_DATA_DIRS='/nix/store/qgwwg2jr2yrksig72y9cmhj65bdcnxhn-bun-1.3.5/share:/nix/store/pmb8clh66mryha2ijzz3dg969drrkgj7-python3-3.14.2/share:/nix/store/3vs2fr2mazafcdwyza15bfhpmccx1k7z-patchelf-0.15.2/share'
 export XDG_DATA_DIRS
+_PYTHON_HOST_PLATFORM='linux-x86_64'
+export _PYTHON_HOST_PLATFORM
+_PYTHON_SYSCONFIGDATA_NAME='_sysconfigdata__linux_x86_64-linux-gnu'
+export _PYTHON_SYSCONFIGDATA_NAME
 __structuredAttrs=''
 export __structuredAttrs
 _substituteStream_has_warned_replace_deprecation='false'
@@ -111,9 +123,9 @@ doInstallCheck=''
 export doInstallCheck
 dontAddDisableDepTrack='1'
 export dontAddDisableDepTrack
-declare -a envBuildBuildHooks=()
-declare -a envBuildHostHooks=()
-declare -a envBuildTargetHooks=()
+declare -a envBuildBuildHooks=('addPythonPath' 'sysconfigdataHook' )
+declare -a envBuildHostHooks=('addPythonPath' 'sysconfigdataHook' )
+declare -a envBuildTargetHooks=('addPythonPath' 'sysconfigdataHook' )
 declare -a envHostHostHooks=('ccWrapper_addCVars' 'bintoolsWrapper_addLDVars' )
 declare -a envHostTargetHooks=('ccWrapper_addCVars' 'bintoolsWrapper_addLDVars' )
 declare -a envTargetTargetHooks=()
@@ -126,7 +138,7 @@ mesonFlags=''
 export mesonFlags
 name='nix-shell-env'
 export name
-nativeBuildInputs='/nix/store/2bf7dm4avjkjhgpiad27c8wg96gr17ka-deno-2.6.4'
+nativeBuildInputs='/nix/store/qgwwg2jr2yrksig72y9cmhj65bdcnxhn-bun-1.3.5 /nix/store/vhbrfq30jqqz2w05pcvq3gwn1hq7qym0-python3.14-livereload-2.7.1'
 export nativeBuildInputs
 out='/home/komo/Dev/fuzzko.github.io/outputs/out'
 export out
@@ -147,7 +159,7 @@ phases='buildPhase'
 export phases
 pkg='/nix/store/r9wbjib6xxjkyb9yvjvrkl4sq61i2lyn-gcc-wrapper-15.2.0'
 declare -a pkgsBuildBuild=()
-declare -a pkgsBuildHost=('/nix/store/2bf7dm4avjkjhgpiad27c8wg96gr17ka-deno-2.6.4' '/nix/store/3vs2fr2mazafcdwyza15bfhpmccx1k7z-patchelf-0.15.2' '/nix/store/9k7h0vvpnb8w4xcaypff4i76n1bsmwzz-update-autotools-gnu-config-scripts-hook' '/nix/store/0y5xmdb7qfvimjwbq7ibg1xdgkgjwqng-no-broken-symlinks.sh' '/nix/store/cv1d7p48379km6a85h4zp6kr86brh32q-audit-tmpdir.sh' '/nix/store/85clx3b0xkdf58jn161iy80y5223ilbi-compress-man-pages.sh' '/nix/store/p3l1a5y7nllfyrjn2krlwgcc3z0cd3fq-make-symlinks-relative.sh' '/nix/store/5yzw0vhkyszf2d179m0qfkgxmp5wjjx4-move-docs.sh' '/nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh' '/nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh' '/nix/store/pag6l61paj1dc9sv15l7bm5c17xn5kyk-move-systemd-user-units.sh' '/nix/store/cmzya9irvxzlkh7lfy6i82gbp0saxqj3-multiple-outputs.sh' '/nix/store/x8c40nfigps493a07sdr2pm5s9j1cdc0-patch-shebangs.sh' '/nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh' '/nix/store/xyff06pkhki3qy1ls77w10s0v79c9il0-reproducible-builds.sh' '/nix/store/z7k98578dfzi6l3hsvbivzm7hfqlk0zc-set-source-date-epoch-to-latest.sh' '/nix/store/pilsssjjdxvdphlg2h19p0bfx5q0jzkn-strip.sh' '/nix/store/r9wbjib6xxjkyb9yvjvrkl4sq61i2lyn-gcc-wrapper-15.2.0' '/nix/store/dwiyp91lmxq864plaas14jm14m87sg3f-binutils-wrapper-2.44' )
+declare -a pkgsBuildHost=('/nix/store/qgwwg2jr2yrksig72y9cmhj65bdcnxhn-bun-1.3.5' '/nix/store/vhbrfq30jqqz2w05pcvq3gwn1hq7qym0-python3.14-livereload-2.7.1' '/nix/store/fndd9bq2ryc13qrz5f2n6q5sr83h04vi-python3.14-tornado-6.5.2' '/nix/store/pmb8clh66mryha2ijzz3dg969drrkgj7-python3-3.14.2' '/nix/store/vsxj4c2r8c4k8z94cnh54dvh75yqqcq4-python3.14-six-1.17.0' '/nix/store/3vs2fr2mazafcdwyza15bfhpmccx1k7z-patchelf-0.15.2' '/nix/store/9k7h0vvpnb8w4xcaypff4i76n1bsmwzz-update-autotools-gnu-config-scripts-hook' '/nix/store/0y5xmdb7qfvimjwbq7ibg1xdgkgjwqng-no-broken-symlinks.sh' '/nix/store/cv1d7p48379km6a85h4zp6kr86brh32q-audit-tmpdir.sh' '/nix/store/85clx3b0xkdf58jn161iy80y5223ilbi-compress-man-pages.sh' '/nix/store/p3l1a5y7nllfyrjn2krlwgcc3z0cd3fq-make-symlinks-relative.sh' '/nix/store/5yzw0vhkyszf2d179m0qfkgxmp5wjjx4-move-docs.sh' '/nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh' '/nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh' '/nix/store/pag6l61paj1dc9sv15l7bm5c17xn5kyk-move-systemd-user-units.sh' '/nix/store/cmzya9irvxzlkh7lfy6i82gbp0saxqj3-multiple-outputs.sh' '/nix/store/x8c40nfigps493a07sdr2pm5s9j1cdc0-patch-shebangs.sh' '/nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh' '/nix/store/xyff06pkhki3qy1ls77w10s0v79c9il0-reproducible-builds.sh' '/nix/store/z7k98578dfzi6l3hsvbivzm7hfqlk0zc-set-source-date-epoch-to-latest.sh' '/nix/store/pilsssjjdxvdphlg2h19p0bfx5q0jzkn-strip.sh' '/nix/store/r9wbjib6xxjkyb9yvjvrkl4sq61i2lyn-gcc-wrapper-15.2.0' '/nix/store/dwiyp91lmxq864plaas14jm14m87sg3f-binutils-wrapper-2.44' )
 declare -a pkgsBuildTarget=()
 declare -a pkgsHostHost=()
 declare -a pkgsHostTarget=()
@@ -169,7 +181,7 @@ export propagatedNativeBuildInputs
 declare -a propagatedTargetDepFiles=('propagated-target-target-deps' )
 shell='/nix/store/lw117lsr8d585xs63kx5k233impyrq7q-bash-5.3p3/bin/bash'
 export shell
-shellHook=''
+shellHook='export LD_LIBRARY_PATH="/nix/store/xc0ga87wdclrx54qjaryahkkmkmqi9qz-gcc-15.2.0-lib/lib"'$'\x0a'''
 export shellHook
 stdenv='/nix/store/n1k7lm072r5k3g6v6wb91d2q4sxcxddm-stdenv-linux'
 export stdenv
@@ -688,6 +700,11 @@ addEnvHooks ()
     do
         eval "${pkgHookVar}s"'+=("$@")';
     done
+}
+addPythonPath ()
+{
+ 
+    addToSearchPathWithCustomDelimiter : PYTHONPATH $1/lib/python3.14/site-packages
 }
 addToSearchPath ()
 {
@@ -2021,6 +2038,26 @@ substituteStream ()
         esac;
     done;
     printf "%s" "${!var}"
+}
+sysconfigdataHook ()
+{
+ 
+    if [ "$1" = '/nix/store/pmb8clh66mryha2ijzz3dg969drrkgj7-python3-3.14.2' ]; then
+        export _PYTHON_HOST_PLATFORM='linux-x86_64';
+        export _PYTHON_SYSCONFIGDATA_NAME='_sysconfigdata__linux_x86_64-linux-gnu';
+    fi
+}
+toPythonPath ()
+{
+ 
+    local paths="$1";
+    local result=;
+    for i in $paths;
+    do
+        p="$i/lib/python3.14/site-packages";
+        result="${result}${result:+:}$p";
+    done;
+    echo $result
 }
 unpackFile ()
 {

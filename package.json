@@ -12,10 +12,11 @@
     "url": "https://github.com/jackyzha0/quartz.git"
   },
   "scripts": {
-    "quartz": "deno run -A ./quartz/bootstrap-cli.mjs",
-    "docs": "npx quartz build --serve -d docs",
-    "check": "tsc --noEmit && npx prettier . --check",
-    "format": "npx prettier . --write",
+    "quartz": "bun ./quartz/bootstrap-cli.mjs",
+    "docs": "bun quartz build --serve -d docs",
+    "watch-serve": "bun quartz build --watch & livereload -p 8080 public",
+    "check": "tsc --noEmit && bun prettier . --check",
+    "format": "bun prettier . --write",
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1"
   },
@@ -109,6 +110,7 @@
     "esbuild": "^0.27.2",
     "prettier": "^3.7.4",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-language-server": "^5.1.3"
   }
 }
