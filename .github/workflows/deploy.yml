@@ -22,14 +22,10 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history for git info
       - uses: canidae-solutions/lix-quick-install-action@v3
-      - uses: rrbutani/use-nix-shell-action@v1
-        with:
-          devShell: .#ci
-      - name: Install dependencies
+      - name: Install dependencies and Build site
+        shell: nix develop .#default --command bash {0}
         run: |
           bun install --frozen-lockfile
-      - name: Build site
-        run: |
           bun quartz build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
