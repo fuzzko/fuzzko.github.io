@@ -21,5 +21,9 @@
             ]
           }"
         '';
-    };
+
+      devShells.ci.packages = pkgs: with pkgs; [
+        bun
+      ];
+    }; 
 }
